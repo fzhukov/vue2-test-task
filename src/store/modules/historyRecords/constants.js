@@ -1,0 +1,6 @@
+// Actions and Mutations
+export const ADD_RECORD_TO_HISTORY = 'ADD_RECORD_TO_HISTORY';
+
+// Getters
+export const GET_HISTORY_RECORDS = 'GET_HISTORY_RECORDS';
+export const GET_FILTERED_HISTORY_RECORDS = 'GET_FILTERED_HISTORY_RECORDS';
