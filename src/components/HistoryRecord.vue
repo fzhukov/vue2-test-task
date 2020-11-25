@@ -10,6 +10,7 @@
       {{ getStatusName(record.status) }}
     </span>
     <span class="history-date">{{ formatDate(record.date) }}</span>
+    <span class="history-id">{{ record.id }}</span>
     <span class="history-name">{{ record.name }}</span>
   </li>
 </template>
@@ -49,7 +50,7 @@ li {
 }
 
 .history-status {
-  width: 120px;
+  width: 80px;
   background-color: rgb(201, 125, 55);
   padding: 2px 6px;
   color: #ffffff;
@@ -70,6 +71,16 @@ li {
 .history-date {
   width: 220px;
   background-color: rgb(68, 62, 53);
+  padding: 2px 6px;
+  color: #ffffff;
+  box-sizing: border-box;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.45);
+  text-align: center;
+}
+
+.history-id {
+  width: 230px;
+  background-color: rgb(196, 104, 29);
   padding: 2px 6px;
   color: #ffffff;
   box-sizing: border-box;
