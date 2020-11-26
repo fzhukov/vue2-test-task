@@ -24,9 +24,7 @@ export default {
   components: {
     HistoryRecordList,
   },
-  computed: {
-    ...mapGetters([getFilteredHistoryRecords]),
-  },
+  computed: mapGetters([getFilteredHistoryRecords]),
   methods: {
     getStatusName(status) {
       return getStatusName(status);
