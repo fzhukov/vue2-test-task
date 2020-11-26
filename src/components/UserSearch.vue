@@ -10,18 +10,18 @@
 
 <script>
 export default {
-  name: "UserSearch",
+  name: 'UserSearch',
   data() {
     return {
-      name: "",
+      name: '',
     };
   },
   methods: {
     onSubmit() {
-      this.$emit("changed-name", this.name);
+      this.$emit('changed-name', this.name);
     },
     onReset() {
-      this.name = "";
+      this.name = '';
       this.onSubmit();
     },
   },

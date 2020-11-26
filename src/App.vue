@@ -8,14 +8,14 @@
 </template>
 
 <script>
-import { mapGetters } from "vuex";
+import { mapGetters } from 'vuex';
 
-import { FETCH_USERS, getLoadingStatus } from "@/store/modules/users/constants";
-import NavigationMenu from "@/components/NavigationMenu";
-import Loader from "@/components/Loader";
+import { FETCH_USERS, getLoadingStatus } from '@/store/modules/users/constants';
+import NavigationMenu from '@/components/NavigationMenu';
+import Loader from '@/components/Loader';
 
 export default {
-  name: "App",
+  name: 'App',
   components: {
     NavigationMenu,
     Loader,
@@ -34,7 +34,7 @@ export default {
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   text-align: center;
   color: #2c3e50;
   margin-top: 25px;

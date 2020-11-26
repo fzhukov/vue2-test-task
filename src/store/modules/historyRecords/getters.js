@@ -1,18 +1,17 @@
 import {
   getHistoryRecords,
-  getFilteredHistoryRecords
-} from "./constants";
+  getFilteredHistoryRecords,
+} from './constants';
 
 const getters = {
   [getHistoryRecords](state) {
     return state;
   },
-  [getFilteredHistoryRecords]: (state, getters) => (status = '') => {
+  [getFilteredHistoryRecords]: (state, gettersArg) => (status = '') => {
     if (status) {
       return state.filter((item) => item.status.toLowerCase().includes(status.toLowerCase()));
-    } else {
-      return getters.getHistoryRecords;
     }
+    return gettersArg.getHistoryRecords;
   },
 };
 

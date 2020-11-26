@@ -1,24 +1,24 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
+import Vue from 'vue';
+import VueRouter from 'vue-router';
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 const routes = [
   {
     path: '/',
-    component: () => import('../views/HomePage.vue')
+    component: () => import('../views/HomePage.vue'),
   },
   {
     path: '/history',
     component: () => import('../views/HistoryPage.vue'),
-    props: (route) => ({ status: route.query.status })
+    props: (route) => ({ status: route.query.status }),
   },
 ];
 
 const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
-  routes
-})
+  routes,
+});
 
-export default router
+export default router;

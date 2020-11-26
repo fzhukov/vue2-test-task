@@ -16,12 +16,12 @@
 </template>
 
 <script>
-import { formatDate } from "@/utils/date";
-import { getStatusName } from "@/utils/historyRecord";
-import { RECORD_STATUS } from "@/constants/recordStatus";
+import formatDate from '@/utils/date';
+import getStatusName from '@/utils/historyRecord';
+import RECORD_STATUS from '@/constants/recordStatus';
 
 export default {
-  name: "HistoryRecord",
+  name: 'HistoryRecord',
   props: {
     record: {
       type: Object,

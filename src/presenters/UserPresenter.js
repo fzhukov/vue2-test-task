@@ -1,28 +1,30 @@
-import { UsersDtoToView } from '../mappers/UserMapper';
+import usersDtoToView from '../mappers/UserMapper';
 
-class _UserPresenter {
-  getUsers() {
-
-    // Можно еще создать HTTPService и вынести туда fetch и определить методы get post и т.д, но мне уже лень :)
+class UserPresenter {
+  static getUsers() {
+    /**
+     * Можно еще создать HTTPService и вынести туда fetch и
+     * определить методы get post и т.д, но мне уже лень :)
+     */
     return fetch('http://localhost:3000/users', {
       method: 'GET',
       headers: {
-        'Content-Type': 'application/json'
-      }
-    }).then(response => response.json())
-    .then(json => UsersDtoToView(json));
+        'Content-Type': 'application/json',
+      },
+    }).then((response) => response.json())
+      .then((json) => usersDtoToView(json));
   }
 
   // filterUsers(query) {
-  //  
+  //
   //   return fetch(`http://localhost:3000/users?q=${query}&_sort=name&_order=desc`, {
   //     method: 'GET',
   //     headers: {
   //       'Content-Type': 'application/json'
   //     }
   //   }).then(response => response.json())
-  //   .then(json => UsersDtoToView(json));
+  //   .then(json => usersDtoToView(json));
   // }
 }
 
-export const UserPresenter = new _UserPresenter();
+export default UserPresenter;

@@ -1,5 +1,5 @@
-export const getStatusName = (status) => {
-  switch(status) {
+const getStatusName = (status) => {
+  switch (status) {
     case 'added':
       return 'Added';
     case 'deleted':
@@ -8,3 +8,5 @@ export const getStatusName = (status) => {
       return '#ERROR';
   }
 };
+
+export default getStatusName;

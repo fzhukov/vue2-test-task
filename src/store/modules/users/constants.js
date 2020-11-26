@@ -1,4 +1,3 @@
-
 // Actions and Mutations
 export const FETCH_USERS = 'FETCH_USERS';
 export const SET_ITEMS = 'SET_ITEMS';

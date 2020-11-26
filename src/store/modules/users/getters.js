@@ -3,7 +3,7 @@ import {
   getFirstColumnUsers,
   getSecondColumnUsers,
   getFilteredFirstColumnUsers,
- } from "./constants";
+} from './constants';
 
 const getters = {
   [getFirstColumnUsers](state) {
@@ -12,12 +12,12 @@ const getters = {
   [getSecondColumnUsers](state) {
     return state.secondColumn;
   },
-  [getFilteredFirstColumnUsers]: (state, getters) => (queryName = '') => {
+  [getFilteredFirstColumnUsers]: (state, gettersArg) => (queryName = '') => {
     if (queryName) {
-      return state.firstColumn.filter((user) => user.name.toLowerCase().includes(queryName.toLowerCase()));
-    } else {
-      return getters.getFirstColumnUsers;
+      return state.firstColumn
+        .filter((user) => user.name.toLowerCase().includes(queryName.toLowerCase()));
     }
+    return gettersArg.getFirstColumnUsers;
   },
   [getLoadingStatus](state) {
     return state.loadingStatus;

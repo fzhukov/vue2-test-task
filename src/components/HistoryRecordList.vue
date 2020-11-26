@@ -9,10 +9,10 @@
 </template>
 
 <script>
-import HistoryRecord from "@/components/HistoryRecord";
+import HistoryRecord from '@/components/HistoryRecord';
 
 export default {
-  name: "HistoryRecordList",
+  name: 'HistoryRecordList',
   props: {
     records: Array,
   },

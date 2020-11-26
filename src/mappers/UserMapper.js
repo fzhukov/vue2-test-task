@@ -1,11 +1,14 @@
-export function UsersDtoToView(dataArray) {
-  let flatUsers = [];
+const usersDtoToView = (dataArray) => {
+  const users = dataArray;
+  const flatUsers = [];
 
-  for (let i = 0; i < dataArray.length; i++) {
-    const { items } = dataArray[i];
-    delete dataArray[i].items;
-    flatUsers.push(dataArray[i], ...items);
+  for (let i = 0; i < users.length; i += 1) {
+    const { items } = users[i];
+    delete users[i].items;
+    flatUsers.push(users[i], ...items);
   }
-  
+
   return flatUsers;
-}
+};
+
+export default usersDtoToView;

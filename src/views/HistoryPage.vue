@@ -10,14 +10,14 @@
 </template>
 
 <script>
-import { mapGetters } from "vuex";
+import { mapGetters } from 'vuex';
 
-import HistoryRecordList from "@/components/HistoryRecordList";
-import { getStatusName } from "@/utils/historyRecord";
-import { getFilteredHistoryRecords } from "@/store/modules/historyRecords/constants";
+import HistoryRecordList from '@/components/HistoryRecordList';
+import getStatusName from '@/utils/historyRecord';
+import { getFilteredHistoryRecords } from '@/store/modules/historyRecords/constants';
 
 export default {
-  name: "HistoryPage",
+  name: 'HistoryPage',
   props: {
     status: String,
   },

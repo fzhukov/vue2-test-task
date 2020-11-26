@@ -27,24 +27,24 @@
 </template>
 
 <script>
-import { mapGetters } from "vuex";
+import { mapGetters } from 'vuex';
 
 import {
   getSecondColumnUsers,
   getFilteredFirstColumnUsers,
   MOVE_TO_FIRST_COLUMN,
   MOVE_TO_SECOND_COLUMN,
-} from "@/store/modules/users/constants";
+} from '@/store/modules/users/constants';
 
-import { RECORD_STATUS } from "@/constants/recordStatus";
-import UserSearch from "@/components/UserSearch";
-import UserList from "@/components/UserList";
+import RECORD_STATUS from '@/constants/recordStatus';
+import UserSearch from '@/components/UserSearch';
+import UserList from '@/components/UserList';
 
 export default {
-  name: "HomePage",
+  name: 'HomePage',
   data() {
     return {
-      name: "",
+      name: '',
     };
   },
   components: {
