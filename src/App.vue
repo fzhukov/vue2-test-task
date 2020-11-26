@@ -2,7 +2,7 @@
   <div id="app">
     <h1>Application</h1>
     <NavigationMenu />
-    <Loader v-if="GET_LOADING_STATUS" />
+    <Loader v-if="getLoadingStatus" />
     <router-view v-else />
   </div>
 </template>
@@ -10,10 +10,7 @@
 <script>
 import { mapGetters } from "vuex";
 
-import {
-  FETCH_USERS,
-  GET_LOADING_STATUS,
-} from "@/store/modules/users/constants";
+import { FETCH_USERS, getLoadingStatus } from "@/store/modules/users/constants";
 import NavigationMenu from "@/components/NavigationMenu";
 import Loader from "@/components/Loader";
 
@@ -31,7 +28,7 @@ export default {
   async mounted() {
     this.$store.dispatch(FETCH_USERS);
   },
-  computed: mapGetters([GET_LOADING_STATUS]),
+  computed: mapGetters([getLoadingStatus]),
 };
 </script>
 

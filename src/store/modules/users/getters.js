@@ -1,25 +1,25 @@
 import {
-  GET_LOADING_STATUS,
-  GET_FIRST_COLUMN_USERS,
-  GET_SECOND_COLUMN_USERS,
-  GET_FILTERED_FIRST_COLUMN_USERS,
+  getLoadingStatus,
+  getFirstColumnUsers,
+  getSecondColumnUsers,
+  getFilteredFirstColumnUsers,
  } from "./constants";
 
 const getters = {
-  [GET_FIRST_COLUMN_USERS](state) {
+  [getFirstColumnUsers](state) {
     return state.firstColumn;
   },
-  [GET_SECOND_COLUMN_USERS](state) {
+  [getSecondColumnUsers](state) {
     return state.secondColumn;
   },
-  [GET_FILTERED_FIRST_COLUMN_USERS]: (state, getters) => (queryName = '') => {
+  [getFilteredFirstColumnUsers]: (state, getters) => (queryName = '') => {
     if (queryName) {
       return state.firstColumn.filter((user) => user.name.toLowerCase().includes(queryName.toLowerCase()));
     } else {
-      return getters.GET_FIRST_COLUMN_USERS;
+      return getters.getFirstColumnUsers;
     }
   },
-  [GET_LOADING_STATUS](state) {
+  [getLoadingStatus](state) {
     return state.loadingStatus;
   },
 };

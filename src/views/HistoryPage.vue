@@ -2,8 +2,8 @@
   <div>
     <h1>History Page{{ this.getFilteredStatusTitle() }}</h1>
     <HistoryRecordList
-      v-if="GET_FILTERED_HISTORY_RECORDS(this.status).length"
-      :records="GET_FILTERED_HISTORY_RECORDS(this.status)"
+      v-if="getFilteredHistoryRecords(this.status).length"
+      :records="getFilteredHistoryRecords(this.status)"
     />
     <p v-else>History is empty</p>
   </div>
@@ -14,7 +14,7 @@ import { mapGetters } from "vuex";
 
 import HistoryRecordList from "@/components/HistoryRecordList";
 import { getStatusName } from "@/utils/historyRecord";
-import { GET_FILTERED_HISTORY_RECORDS } from "@/store/modules/historyRecords/constants";
+import { getFilteredHistoryRecords } from "@/store/modules/historyRecords/constants";
 
 export default {
   name: "HistoryPage",
@@ -25,7 +25,7 @@ export default {
     HistoryRecordList,
   },
   computed: {
-    ...mapGetters([GET_FILTERED_HISTORY_RECORDS]),
+    ...mapGetters([getFilteredHistoryRecords]),
   },
   methods: {
     getStatusName(status) {

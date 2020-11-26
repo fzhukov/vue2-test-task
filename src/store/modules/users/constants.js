@@ -8,7 +8,7 @@ export const MOVE_TO_SECOND_COLUMN = 'MOVE_TO_SECOND_COLUMN';
 export const SET_LOADING_STATUS = 'SET_LOADING_STATUS';
 
 // Getters
-export const GET_LOADING_STATUS = 'GET_LOADING_STATUS';
-export const GET_FIRST_COLUMN_USERS = 'GET_FIRST_COLUMN_USERS';
-export const GET_SECOND_COLUMN_USERS = 'GET_SECOND_COLUMN_USERS';
-export const GET_FILTERED_FIRST_COLUMN_USERS = 'GET_FILTERED_FIRST_COLUMN_USERS';
+export const getLoadingStatus = 'getLoadingStatus';
+export const getFirstColumnUsers = 'getFirstColumnUsers';
+export const getSecondColumnUsers = 'getSecondColumnUsers';
+export const getFilteredFirstColumnUsers = 'getFilteredFirstColumnUsers';

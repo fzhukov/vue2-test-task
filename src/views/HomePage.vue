@@ -8,7 +8,7 @@
         <UserList
           btnTitle="Add"
           :status="recordStatus().ADDED"
-          :users="GET_FILTERED_FIRST_COLUMN_USERS(name)"
+          :users="getFilteredFirstColumnUsers(name)"
           @move-user-to-column="moveToSecondColumn"
         />
       </div>
@@ -18,7 +18,7 @@
           class="second-user-list"
           btnTitle="Remove"
           :status="recordStatus().DELETED"
-          :users="GET_SECOND_COLUMN_USERS"
+          :users="getSecondColumnUsers"
           @move-user-to-column="moveToFirstColumn"
         />
       </div>
@@ -27,34 +27,31 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
+import { mapGetters } from "vuex";
 
 import {
-  GET_SECOND_COLUMN_USERS,
-  GET_FILTERED_FIRST_COLUMN_USERS,
+  getSecondColumnUsers,
+  getFilteredFirstColumnUsers,
   MOVE_TO_FIRST_COLUMN,
   MOVE_TO_SECOND_COLUMN,
-} from '@/store/modules/users/constants';
+} from "@/store/modules/users/constants";
 
-import { RECORD_STATUS } from '@/constants/recordStatus';
-import UserSearch from '@/components/UserSearch';
-import UserList from '@/components/UserList';
+import { RECORD_STATUS } from "@/constants/recordStatus";
+import UserSearch from "@/components/UserSearch";
+import UserList from "@/components/UserList";
 
 export default {
-  name: 'HomePage',
+  name: "HomePage",
   data() {
     return {
-      name: '',
+      name: "",
     };
   },
   components: {
     UserList,
     UserSearch,
   },
-  computed: mapGetters([
-    GET_SECOND_COLUMN_USERS,
-    GET_FILTERED_FIRST_COLUMN_USERS,
-  ]),
+  computed: mapGetters([getSecondColumnUsers, getFilteredFirstColumnUsers]),
   methods: {
     moveToFirstColumn(id) {
       this.$store.dispatch(MOVE_TO_FIRST_COLUMN, id);
