@@ -10,4 +10,4 @@ export const SET_LOADING_STATUS = 'SET_LOADING_STATUS';
 export const getLoadingStatus = 'getLoadingStatus';
 export const getFirstColumnUsers = 'getFirstColumnUsers';
 export const getSecondColumnUsers = 'getSecondColumnUsers';
-export const getFilteredFirstColumnUsers = 'getFilteredFirstColumnUsers';
+export const getFilteredUsers = 'getFilteredUsers';

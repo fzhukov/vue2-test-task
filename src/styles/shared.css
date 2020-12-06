@@ -1,10 +1,14 @@
 .btn {
-  background-color: #555555;
+  background-color: #B7B7A4;
   border: none;
-  color: white;
+  color: #636464;
   padding: 6px 8px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   cursor: pointer;
+}
+
+.hl-subsrt {
+  background-color: #DDBEA9;
 }

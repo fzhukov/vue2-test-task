@@ -40,24 +40,21 @@ export default {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  border: 1px solid #e7e7e7;
-  background-color: #f3f3f3;
+  background-color: #eddcd2;
 }
 
 .nav-menu a {
   display: block;
-  color: #666;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 }
 
 .nav-menu a:hover:not(.router-link-exact-active) {
-  background-color: #ddd;
+  background-color: #ddbea9;
 }
 
 .nav-menu a.router-link-exact-active {
-  color: white;
-  background-color: rgb(68, 123, 185);
+  background-color: #b7b7a4;
 }
 </style>

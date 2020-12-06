@@ -29,7 +29,7 @@ export default {
 </script>
 
 <style scoped>
-@import "../styles/shared.css";
+@import '../styles/shared.css';
 
 .form-search {
   display: flex;
@@ -40,22 +40,27 @@ export default {
 .input-search {
   flex-grow: 1;
   margin-right: 5px;
+  border: 1px solid #636464;
+  color: #636464;
+  outline: #636464;
+  padding: 0 5px;
+  background-color: #fff1e6;
 }
 
 .btn-submit {
-  background-color: #4caf50;
+  background-color: #eddcd2;
   margin-right: 5px;
 }
 
 .btn-reset {
-  background-color: rgb(224, 61, 94);
+  background-color: #eddcd2;
 }
 
 .btn-submit:hover {
-  background-color: #409143;
+  background-color: #b7b7a4;
 }
 
 .btn-reset:hover {
-  background-color: rgb(196, 56, 84);
+  background-color: #ddbea9;
 }
 </style>

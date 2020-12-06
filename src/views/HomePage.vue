@@ -8,7 +8,7 @@
         <UserList
           btnTitle="Add"
           :status="recordStatus().ADDED"
-          :users="getFilteredFirstColumnUsers(name)"
+          :users="getFilteredUsers(name)"
           @move-user-to-column="moveToSecondColumn"
         />
       </div>
@@ -31,7 +31,7 @@ import { mapGetters } from 'vuex';
 
 import {
   getSecondColumnUsers,
-  getFilteredFirstColumnUsers,
+  getFilteredUsers,
   MOVE_TO_FIRST_COLUMN,
   MOVE_TO_SECOND_COLUMN,
 } from '@/store/modules/users/constants';
@@ -51,7 +51,7 @@ export default {
     UserList,
     UserSearch,
   },
-  computed: mapGetters([getSecondColumnUsers, getFilteredFirstColumnUsers]),
+  computed: mapGetters([getSecondColumnUsers, getFilteredUsers]),
   methods: {
     moveToFirstColumn(id) {
       this.$store.dispatch(MOVE_TO_FIRST_COLUMN, id);

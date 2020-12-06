@@ -33,10 +33,26 @@ export default {
 </script>
 
 <style>
+html {
+  background-color: #fff1e6;
+  color: #636464;
+}
+
+::-moz-selection {
+  background: #cb997e;
+}
+
+::selection {
+  background: #cb997e;
+}
+
+a {
+  color: #636464;
+}
+
 #app {
   font-family: Helvetica, Arial, sans-serif;
   text-align: center;
-  color: #2c3e50;
   margin-top: 25px;
 }
 </style>

@@ -12,7 +12,6 @@ const actions = {
     commit(SET_LOADING_STATUS, true);
 
     const firstColumn = await UserPresenter.getUsers();
-
     commit(SET_ITEMS, firstColumn);
     commit(SET_LOADING_STATUS, false);
   },

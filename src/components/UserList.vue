@@ -3,7 +3,7 @@
     <ul v-if="users.length">
       <User
         v-for="(user, index) of users"
-        :key="index"
+        :key="user.id"
         :user="user"
         :index="index"
         :btnTitle="btnTitle"

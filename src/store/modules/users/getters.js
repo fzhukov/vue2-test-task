@@ -1,8 +1,9 @@
+import UserPresenter from '@/presenters/UserPresenter';
 import {
   getLoadingStatus,
   getFirstColumnUsers,
   getSecondColumnUsers,
-  getFilteredFirstColumnUsers,
+  getFilteredUsers,
 } from './constants';
 
 const getters = {
@@ -12,10 +13,9 @@ const getters = {
   [getSecondColumnUsers](state) {
     return state.secondColumn;
   },
-  [getFilteredFirstColumnUsers]: (state, gettersArg) => (queryName = '') => {
+  [getFilteredUsers]: (state, gettersArg) => (queryName = '') => {
     if (queryName) {
-      return state.firstColumn
-        .filter((user) => user.name.toLowerCase().includes(queryName.toLowerCase()));
+      return UserPresenter.filteredUsers(state.firstColumn, queryName.toLowerCase());
     }
     return gettersArg.getFirstColumnUsers;
   },

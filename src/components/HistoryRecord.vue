@@ -51,51 +51,43 @@ li {
 
 .history-status {
   width: 80px;
-  background-color: rgb(201, 125, 55);
+  background-color: #eddcd2;
   padding: 2px 6px;
-  color: #ffffff;
   border-radius: 4px 0 0 4px;
   box-sizing: border-box;
-  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.45);
   text-align: center;
 }
 
 .status-added {
-  background-color: rgb(62, 126, 67);
+  background-color: #a5a58d;
 }
 
 .status-deleted {
-  background-color: rgb(224, 61, 94);
+  background-color: #cb997e;
 }
 
 .history-date {
   width: 220px;
-  background-color: rgb(68, 62, 53);
+  background-color: #ddbea9;
   padding: 2px 6px;
-  color: #ffffff;
   box-sizing: border-box;
-  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.45);
   text-align: center;
 }
 
 .history-id {
   width: 230px;
-  background-color: rgb(196, 104, 29);
+  background-color: #eddcd2;
   padding: 2px 6px;
-  color: #ffffff;
   box-sizing: border-box;
-  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.45);
   text-align: center;
 }
 
 .history-name {
   width: 200px;
-  background-color: rgb(68, 123, 185);
+  background-color: #b7b7a4;
   padding: 2px 6px;
-  color: #ffffff;
   box-sizing: border-box;
   border-radius: 0 4px 4px 0;
-  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.45);
   text-align: center;
 }
 </style>
